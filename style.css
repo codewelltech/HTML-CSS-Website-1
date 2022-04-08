@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #282828 url("images/coffee.jpg");
+  background-size: cover;
+  transition: background 500ms ease-in-out;
+  overflow: hidden;
+  overflow-y: auto;
+}
+header {
+  height: 80px;
+  background: transparent;
+  transition: box-shadow 150ms ease-in-out;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #444;
+  z-index: 9999;
+}
+header:hover {
+  box-shadow: 0px 0px 15px 1px black;
+}
+.navigation {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo {
+  flex: 2 1 50px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+ul.menu {
+  flex: 5;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+ul.menu li {
+  list-style: none;
+  cursor: pointer;
+  transform: scale(0.95);
+  transform-origin: center;
+  font-size: 1.3rem;
+  padding: 20px 5px;
+  border-bottom: 2px solid transparent;
+  transition: all 300ms ease-in-out;
+  text-transform: uppercase;
+}
+ul.menu li:hover {
+  transform: scale(1);
+  border-bottom: 2px solid #fff;
+}
+
+.search {
+  flex: 3;
+  display: flex;
+  align-items: center;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 8px 5px;
+  border: 2px solid rgb(41, 147, 233);
+  outline: none;
+  background-color: transparent;
+  caret-color: #fff;
+  color: #fff;
+  font-size: 1rem;
+}
+input[type]::placeholder {
+  padding: 0px 5px;
+  font-size: 1rem;
+  transition: all 200ms ease-in-out;
+  color: rgb(172, 164, 164);
+  position: relative;
+}
+input[type]:focus::placeholder {
+  font-size: 0.7rem;
+  bottom: 25px;
+  position: absolute;
+  transition: all 400ms;
+}
+
+.btn {
+  background: #127acf;
+  padding: 10px;
+  letter-spacing: 1px;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+.btn:hover {
+  background-color: #1c95f8;
+}
+main {
+  height: calc(100vh - 80px);
+  margin-top: 80px;
+}
+.container {
+  display: flex;
+  color: #fff;
+  height: inherit;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container .left {
+  flex: 7;
+}
+.container .right {
+  flex: 3;
+}
+
+.left,
+.right {
+  padding: 50px;
+}
+
+.left .box,
+.right .box {
+  border: 2px solid transparent;
+  background: #191515d4;
+  border-radius: 10px;
+  padding: 40px 20px;
+  transition: all 200ms ease-in-out;
+  backdrop-filter: blur(5px);
+}
+
+.left .box {
+  height: 400px;
+  width: 700px;
+}
+.right .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+}
+
+/* common css */
+.txt-medium {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.txt-bigger {
+  font-size: 3rem;
+  font-weight: 600;
+}
+hr {
+  width: 80%;
+  border-radius: 5px;
+  height: 3px;
+  border: 0 none;
+  margin-bottom: 10px;
+  background-color: #0387d9;
+}
+.form-login {
+  width: 100%;
+  padding: 10px 30px;
+}
+.form-login > * {
+  margin-top: 10px;
+}
+
+.form-login input[type="text"],
+input[type="password"] {
+  width: 97%;
+  border: none;
+  border-bottom: 1px solid #127acf;
+  transition: all 0.3s;
+}
+.form-login input[type="text"]:focus,
+input[type="password"]:focus {
+  width: 100%;
+  border-bottom-color: #1c95f8;
+}
+
+.btn-login {
+  width: 100%;
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #24ed1e;
+}
+
+.social-media {
+  margin-top: 10px;
+  height: 50px;
+  padding: 5px;
+}
+.social-media > * {
+  margin-left: 15px;
+}
+.social-media img {
+  height: 100%;
+  filter: invert(0.7);
+  transition: all 250ms ease-in-out;
+  transform: scale(1);
+}
+.social-media img:hover {
+  filter: invert(1);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.mt-10 {
+  margin-top: 10px;
+}
+
+.bg-select {
+  position: absolute;
+  display: flex;
+  height: 20px;
+  width: 100px;
+  bottom: 5%;
+  left: 48%;
+}
+.bg-option {
+  height: 100%;
+  width: 20px;
+  cursor: pointer;
+  margin: 5px;
+}
+.bg-gray {
+  background: rgb(39, 36, 36);
+}
+.bg-green1 {
+  background: rgb(5, 87, 5);
+}
+.bg-green2 {
+  background: rgb(7, 190, 7);
+}
+
+/* Pages Css Starts here */
+#home {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+
+.pages {
+  display: flex;
+  flex-direction: column;
+}
+.page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  color: #282828;
+  background: #fff;
+}
+
+.left-page {
+  flex: 5;
+  border-right: 2px solid #fff;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.right-page {
+  flex: 5;
+  background: #fff;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #282828;
+  gap: 50px;
+}
+
+li > a {
+  position: relative;
+  color: #fff;
+}
+
+li > a:active {
+  top: 1px;
+  color: rgb(50, 192, 73);
+}
+
+/* singup form css */
+#signup.page input[type] {
+  border: none;
+  border-bottom: 1px solid #282828;
+  caret-color: #282828;
+  color: #282828;
+  width: 100%;
+}
+#signup.page input[type]::placeholder {
+  color: #807b7b;
+}
+.singup-form {
+  width: 350px;
+  padding: 30px;
+  box-shadow: 5px 10px 15px 0px #00000026;
+}
+.singup-form > * {
+  margin-top: 10px;
+}
+.info-container {
+  background: blue;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.txt-container {
+  color: #fff;
+  height: auto;
+  width: 300px;
+}
+.img-container {
+  height: 300px;
+  width: 220px;
+  position: absolute;
+  left: 80%;
+  top: 30%;
+  box-shadow: 10px 5px 15px rgb(39 36 36);
+}
+.img-container img {
+  height: 100%;
+  width: 100%;
+}
+
+.square-big-top,
+.square-big-top-2 {
+  background: rgb(216, 235, 48);
+  height: 150px;
+  width: 80px;
+  transform: skew(332deg, 28deg);
+  position: absolute;
+  top: 20%;
+  left: 6%;
+  z-index: 1;
+}
+.square-big-top-2 {
+  top: 24%;
+  left: 8%;
+  z-index: 1;
+  background: rgb(52, 54, 34);
+}
+.square-big-bottom {
+  background: rgb(216, 235, 48);
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10%;
+  right: 15%;
+  z-index: 1;
+}
+section h1 {
+  font-size: 2.5rem;
+}
